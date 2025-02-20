@@ -7,11 +7,12 @@
 #'
 #' @return z-score or percentile of the z-score
 #' @importFrom stats pnorm
+#' @export
 #'
 #' @references  Drukker et al. 2020 (INTERGROWTH-21st project), <https://pmc.ncbi.nlm.nih.gov/articles/PMC7287403/#sec2>
 #' @examples
-#' #z_doppler(index="PI", value=1, GA=metricGA("36+4"), return_value = "z")
-#' #z_doppler(index="PI", value=1, GA=36+4/7, return_value = "centile")
+#' z_doppler(index="PI", value=1, GA=metricGA("36+4"), return_value = "z")
+#' z_doppler(index="PI", value=1, GA=36+4/7, return_value = "centile")
 
 
 
