@@ -45,8 +45,13 @@ load("./inst/extdata/References_Krishnan_etal_2016_25-02-20.rda")
 #' 2. Schneider, C. et al. Development of Z-scores for fetal cardiac dimensions from echocardiography. Ultrasound in Obstetrics & Gynecology 26, 599–605 (2005).
 
 #' @examples
-#' fetal_zscore(actual= 4.8, mod_value=27+3/7, card_param="AoVA", moderator="GA", method="Schneider")
-#' fetal_zscore(actual= 4.8, mod_value=metricGA("27+3"), card_param="AoVA", moderator="GA", method="Schneider")
+#' fetal_zscore(actual= 4.8, mod_value=27+3/7,
+#' card_param="AoVA", moderator="EGA",
+#' method="Schneider", out="z")
+#'
+#' fetal_zscore(actual= 4.8, mod_value=metricGA("27+3"),
+#' card_param="AoVA", moderator="EGA",
+#' method="Krishnan", out="z")
 
 
 

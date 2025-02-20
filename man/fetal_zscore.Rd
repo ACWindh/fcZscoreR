@@ -27,14 +27,14 @@ Calculate z-scores for fetal cardiac parameters in Doppler Sono
 }
 \details{
 \itemize{
-\item \emph{mod_value}   for GA: must be in weeks as numeric, continuous value. e.g. 23+4 is given as 23,57 \br
+\item \emph{mod_value}   for GA: must be in weeks as numeric, continuous value. e.g. 23+4 is given as 23,57
 \item \emph{card_param}
 in mm, cardiac parametes can be
 \itemize{
 \item "AoVA" for Aortic valve annulus,
 \item "PDA" for patent ductus arteriosus,
 \item "Asc Ao", "Dsc Ao" for ascending or descending aorta,
-\item "LPA", "RPA", "MPA" for Left \right \main pulmonary artery,
+\item "LPA", "RPA", "MPA" for Left \ right \ main pulmonary artery,
 \item "LVL", "RVL" for left or right inlet or length
 \item "MVA" for Mitral valve annulus,
 \item "PVA" for Pulmonary valve annulus ,
@@ -45,8 +45,8 @@ in mm, cardiac parametes can be
 }
 \item only Schneider:
 \itemize{
-\item "LVArea", "RVArea", for the circumference of the left or right ventricle, \n
-\item "LVEDD", "RVEDD" for end diastolic diameter for left or right ventricle, \n
+\item "LVArea", "RVArea", for the circumference of the left or right ventricle,
+\item "LVEDD", "RVEDD" for end diastolic diameter for left or right ventricle,
 \item "IVC" for Inferior vena cava,
 }
 }
@@ -55,14 +55,19 @@ in mm, cardiac parametes can be
 \item EGA - estimated gestational age in weeks,
 \item BPD - biparietal diameter in mm,
 \item FL - femur length in mm
-\item FW - fetal weight (based on Haddock formula, only available in reference values by Krishan et al. 2016) \n
+\item FW - fetal weight (based on Haddock formula, only available in reference values by Krishan et al. 2016)
 }
 \item \emph{method} one of "Schneider", "Krishnan"
 }
 }
 \examples{
-fetal_zscore(actual= 4.8, mod_value=27+3/7, card_param="AoVA", moderator="GA", method="Schneider")
-fetal_zscore(actual= 4.8, mod_value=metricGA("27+3"), card_param="AoVA", moderator="GA", method="Schneider")
+fetal_zscore(actual= 4.8, mod_value=27+3/7,
+card_param="AoVA", moderator="EGA",
+method="Schneider", out="z")
+
+fetal_zscore(actual= 4.8, mod_value=metricGA("27+3"),
+card_param="AoVA", moderator="EGA",
+method="Krishnan", out="z")
 }
 \references{
 \enumerate{

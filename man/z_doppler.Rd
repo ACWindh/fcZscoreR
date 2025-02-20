@@ -2,9 +2,7 @@
 % Please edit documentation in R/z_doppler.R
 \name{z_doppler}
 \alias{z_doppler}
-\title{Equations for parameters and computations of z scores and centiles for 3 umbilical artery Doppler indices according to GA, in weeks
-Parameter 	Equation based on table 6 of Drukker et al. 2020 (INTERGROWTH-21st project)
-\url{https://pmc.ncbi.nlm.nih.gov/articles/PMC7287403/#sec2}}
+\title{Calculation of z-scores for umbilical Doppler Sonography}
 \usage{
 z_doppler(index = "PI", value, GA, return_value = "z")
 }
@@ -21,13 +19,11 @@ z_doppler(index = "PI", value, GA, return_value = "z")
 z-score or percentile of the z-score
 }
 \description{
-Equations for parameters and computations of z scores and centiles for 3 umbilical artery Doppler indices according to GA, in weeks
-Parameter 	Equation based on table 6 of Drukker et al. 2020 (INTERGROWTH-21st project)
-\url{https://pmc.ncbi.nlm.nih.gov/articles/PMC7287403/#sec2}
+Calculation of z-scores for umbilical Doppler Sonography
 }
 \examples{
-z_doppler(index="PI", value=1, GA=36+4/7, return_value = "z")
-z_doppler(index="PI", value=1, GA=36+4/7, return_value = "centile")
+#z_doppler(index="PI", value=1, GA=metricGA("36+4"), return_value = "z")
+#z_doppler(index="PI", value=1, GA=36+4/7, return_value = "centile")
 }
 \references{
 Drukker et al. 2020 (INTERGROWTH-21st project), \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC7287403/#sec2}

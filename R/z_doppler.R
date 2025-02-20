@@ -1,6 +1,4 @@
-#' Equations for parameters and computations of z scores and centiles for 3 umbilical artery Doppler indices according to GA, in weeks
-#' Parameter 	Equation based on table 6 of Drukker et al. 2020 (INTERGROWTH-21st project)
-#' <https://pmc.ncbi.nlm.nih.gov/articles/PMC7287403/#sec2>
+#' @title Calculation of z-scores for umbilical Doppler Sonography
 #'
 #' @param index one of PI (pulsatility index), RI (resitance index), or ratio for ystolic/diastolic ratio
 #' @param value the observed value for either PI, RI or ratio
@@ -12,13 +10,13 @@
 #'
 #' @references  Drukker et al. 2020 (INTERGROWTH-21st project), <https://pmc.ncbi.nlm.nih.gov/articles/PMC7287403/#sec2>
 #' @examples
-#' z_doppler(index="PI", value=1, GA=36+4/7, return_value = "z")
-#' z_doppler(index="PI", value=1, GA=36+4/7, return_value = "centile")
+#' #z_doppler(index="PI", value=1, GA=metricGA("36+4"), return_value = "z")
+#' #z_doppler(index="PI", value=1, GA=36+4/7, return_value = "centile")
 
 
 
 z_doppler <- function(index="PI", value, GA, return_value = "z"){
-  library(stats)
+  requireNamespace("stats")
   if(!index %in% c("PI", "RI", "ratio"))
     stop(paste("Index must be one of the following:\r\n",
                "PI", "RI", "ratio", collapse = "\r\n"))
