@@ -16,13 +16,13 @@ load("./inst/extdata/References_Krishnan_etal_2016_25-02-20.rda")
 #' @export
 #'
 #' @details
-#' - *mod_value*   for GA: must be in weeks as numeric, continuous value. e.g. 23+4 is given as 23,57 \br
+#' - *mod_value*   for GA: must be in weeks as numeric, continuous value. e.g. 23+4 is given as 23,57
 #' - *card_param*
 #'     in mm, cardiac parametes can be
 #'     - "AoVA" for Aortic valve annulus,
 #'     - "PDA" for patent ductus arteriosus,
 #'     - "Asc Ao", "Dsc Ao" for ascending or descending aorta,
-#'     - "LPA", "RPA", "MPA" for Left \right \main pulmonary artery,
+#'     - "LPA", "RPA", "MPA" for Left \ right \ main pulmonary artery,
 #'     - "LVL", "RVL" for left or right inlet or length
 #'     - "MVA" for Mitral valve annulus,
 #'     - "PVA" for Pulmonary valve annulus ,
@@ -30,14 +30,14 @@ load("./inst/extdata/References_Krishnan_etal_2016_25-02-20.rda")
 #'     - only Krishnan:
 #'        - "AoI" for Aortic isthmus
 #'     - only Schneider:
-#'        - "LVArea", "RVArea", for the circumference of the left or right ventricle, \n
-#'        - "LVEDD", "RVEDD" for end diastolic diameter for left or right ventricle, \n
+#'        - "LVArea", "RVArea", for the circumference of the left or right ventricle,
+#'        - "LVEDD", "RVEDD" for end diastolic diameter for left or right ventricle,
 #'        - "IVC" for Inferior vena cava,
 #' - *moderator*
 #'     - EGA - estimated gestational age in weeks,
 #'     - BPD - biparietal diameter in mm,
 #'     - FL - femur length in mm
-#'     - FW - fetal weight (based on Haddock formula, only available in reference values by Krishan et al. 2016) \n
+#'     - FW - fetal weight (based on Haddock formula, only available in reference values by Krishan et al. 2016)
 #' - *method* one of "Schneider", "Krishnan"
 #
 #' @references
