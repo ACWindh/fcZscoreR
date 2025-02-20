@@ -19,6 +19,8 @@
 #' # Returns: c("23+5", "30+2", "18+0")
 #'
 #' @export
+
+
 stringGA <- function(ga_numeric) {
   # Ensure format is valid
  if(!is.numeric(ga_numeric)) {

@@ -3,4 +3,5 @@
 export(fetal_zscore)
 export(metricGA)
 export(stringGA)
+export(z_doppler)
 importFrom(stats,pnorm)

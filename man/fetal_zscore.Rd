@@ -13,7 +13,7 @@ fetal_zscore(actual, mod_value, card_param, moderator, method, out)
 
 \item{card_param}{which cardiac parameters is used (see Details)}
 
-\item{moderator}{one of GA, BPD or femur}
+\item{moderator}{one of EGA, BPD, FL, FW (see Details)}
 
 \item{method}{see details}
 

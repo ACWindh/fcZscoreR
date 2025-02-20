@@ -8,7 +8,7 @@ load("./inst/extdata/References_Krishnan_etal_2016_25-02-20.rda")
 #' @param actual the observed value in mm
 #' @param mod_value the value of the moderator (see Details)
 #' @param card_param which cardiac parameters is used (see Details)
-#' @param moderator one of GA, BPD or femur
+#' @param moderator one of EGA, BPD, FL, FW (see Details)
 #' @param method see details
 #' @param out one of "z" for the acutal z-score or "centile" for the percentile
 #'
