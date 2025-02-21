@@ -1,7 +1,10 @@
 
 
 load("./inst/extdata/References_Schneider_etal_2005_25-02-20.rda")
+<<<<<<< HEAD
 load("./inst/extdata/References_Krishnan_etal_2016_25-02-21b.rda")
+=======
+>>>>>>> 78859d2a23d19472583c3c59610f2592946b05c7
 
 #' Calculate z-scores for fetal cardiac parameters in Doppler Sono
 #'
