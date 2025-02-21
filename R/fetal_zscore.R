@@ -1,7 +1,7 @@
 
 
 load("./inst/extdata/References_Schneider_etal_2005_25-02-20.rda")
-load("./inst/extdata/References_Krishnan_etal_2016_25-02-20.rda")
+load("./inst/extdata/References_Krishnan_etal_2016_25-02-21.rda")
 
 #' Calculate z-scores for fetal cardiac parameters in Doppler Sono
 #'
@@ -45,9 +45,9 @@ load("./inst/extdata/References_Krishnan_etal_2016_25-02-20.rda")
 #' 2. Schneider, C. et al. Development of Z-scores for fetal cardiac dimensions from echocardiography. Ultrasound in Obstetrics & Gynecology 26, 599–605 (2005).
 
 #' @examples
-#' fetal_zscore(actual= 4.8, mod_value=27+3/7,
-#' card_param="AoVA", moderator="EGA",
-#' method="Schneider", out="z")
+# fetal_zscore(actual= 8.8, mod_value=36+6/7,
+# card_param="PVA", moderator="EGA",
+# method="Schneider", out="z")
 #'
 #' fetal_zscore(actual= 4.8, mod_value=metricGA("27+3"),
 #' card_param="AoVA", moderator="EGA",
@@ -96,7 +96,8 @@ if (method == "Schneider")  {
 
     vec <- ref[ref$Parameter == card_param &
                  ref$Variable == moderator, ]
-    expected = vec$Intercept + vec$m1*mod_value + vec$m2*(mod_value^2 )+ vec$m3*mod_value^3
+    expected =
+      vec$Intercept + vec$m1*mod_value + vec$m2*(mod_value^2 )+ vec$m3*mod_value^3
 
     if(startsWith(vec[,"Outcome"], "ln")){
       zscore = (log(actual) - expected )/vec$Root.MSE }
@@ -115,7 +116,6 @@ if (method == "Schneider")  {
   if(out=="centile") value = (centile)
   return(value)
 }
-
 
 
 
