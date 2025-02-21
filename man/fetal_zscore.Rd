@@ -61,9 +61,6 @@ in mm, cardiac parametes can be
 }
 }
 \examples{
-fetal_zscore(actual= 4.8, mod_value=27+3/7,
-card_param="AoVA", moderator="EGA",
-method="Schneider", out="z")
 
 fetal_zscore(actual= 4.8, mod_value=metricGA("27+3"),
 card_param="AoVA", moderator="EGA",
